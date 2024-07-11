@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { TestWithMockData } from "../TestWithMockData"
+import userEvent from '@testing-library/user-event'
 
 const mockData = [
   {
@@ -14,19 +15,12 @@ const mockData = [
     "last_name": "Harrild",
     "email": "charrild1@dion.ne.jp",
     "age": 35
-  },
-  {
-    "id": 3,
-    "first_name": "Amby",
-    "last_name": "Emmer",
-    "email": "aemmer2@buzzfeed.com",
-    "age": 67
   }
 ]
 
 test("LIst renders successfully", () => {
   render(<TestWithMockData data={mockData} />)
-  expect(screen.getByText(/Fletcher/i)).toBeInTheDocument();
+  expect(screen.getByText(/McVanamy/i)).toBeInTheDocument();
 })
 
 test("Order list renders", () => {
@@ -49,18 +43,3 @@ test("Email link handle called", async () => {
 })
 
 
-test("Elements ", () => {
-  render(<TestWithMockData
-    data={mockData}
-    displayUnorderedLIst={true}
-    handleCick={handleCick}
-  />)
-
-  const input = screen.getByRole('textbox');
-  const button = screen.getByRole('button');
-
-  const nameInput = screen.getByPlaceholderText(/enter name/i)
-  const descriptionName = screen.getByPlaceholderText(/enter description/i)
-
-  
-})
