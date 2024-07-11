@@ -1,6 +1,6 @@
-import { useEffect } from "react"
+import { useState, useEffect } from "react"
 
-const TestingStateChange = () => {
+export const TestingStateChange = () => {
     const [loaded, setLoad] = useState(false)
     useEffect(() => {setLoad(true)},[])
 
