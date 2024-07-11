@@ -36,10 +36,10 @@
     ]
   },
   "jest": {
-    "convergeThreshold": {
-      "global" : {
-        "lines": 80
-      }
+    "coverageThreshold": {
+        "global": {
+            "lines": 80
+        }
     }
-  }
+}
 }
