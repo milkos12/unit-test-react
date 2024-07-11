@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 export const TestingStateChange = () => {
     const [loaded, setLoad] = useState(false)
     const [toogleTextVisble, setToggleVissble] = useState(false)
+    const [btnDisabled, setBtnDisabled] = useState(false)
 
     useEffect(() => {setLoad(true)},[])
 
